@@ -7,8 +7,29 @@
     }
   }
 
+  &__wrapper {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include small {
+      flex-direction: row;
+      gap: 32px;
+    }
+  }
+
   &__test-block {
     display: none;
+
+    @include tablet {
+      display: block;
+      order: -1;
+    }
+
+    @include small {
+      order: 0;
+    }
   }
 
   &__title {
@@ -29,5 +50,259 @@
       font-size: 56px;
       letter-spacing: 0.0125em;
     }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__card .button {
+    margin-top: auto;
+  }
+
+  &__card-icon-block {
+    height: 72px;
+    width: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue-deep;
+    border-radius: 16px;
+    margin-bottom: 32px;
+
+    @include tablet {
+      display: none;
+    }
+
+    @include small {
+      display: flex;
+    }
+
+    @include desktop {
+      height: 92px;
+      width: 92px;
+    }
+  }
+
+  &__card-icon {
+    height: 40px;
+    width: 40px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include desktop {
+      height: 52px;
+      width: 52px;
+    }
+
+    &--search {
+      background-image: url(../images/icons/binoculars.png);
+    }
+
+    &--add {
+      background-image: url(../images/icons/package.png);
+    }
+
+    &--form {
+      background-image: url(../images/icons/notePencil.png);
+    }
+
+    &--truck {
+      background-image: url(../images/icons/truck.png);
+    }
+  }
+
+  &__card-title {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0.015em;
+    margin-bottom: 16px;
+
+    @include tablet {
+      letter-spacing: 0.016em;
+    }
+
+    @include desktop {
+      font-size: 28px;
+      letter-spacing: 0.014em;
+    }
+  }
+
+  &__card-text {
+    font-weight: 300;
+    color: $gray-dark;
+  }
+
+  &__card .button {
+    @include tablet {
+      width: 272px;
+      box-sizing: border-box;
+    }
+
+    @include small {
+      width: auto;
+    }
+  }
+
+  &__card .button p {
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+
+  &__swiper {
+    background-color: $gray-light;
+    border-radius: 8px;
+    padding: 24px;
+    height: 480px;
+    overflow: hidden;
+    position: relative;
+
+    @include tablet {
+      height: 243px;
+    }
+
+    @include small {
+      height: 480px;
+      width: 352px;
+      flex-shrink: 0;
+      box-sizing: border-box;
+    }
+
+    @include desktop {
+      padding: 40px;
+      height: 632px;
+      width: 469px;
+    }
+  }
+
+  &__swiper .swiper-wrapper {
+    margin-bottom: 16px;
+    height: calc(100% - 16px);
+  }
+
+  &__swiper .swiper-scrollbar {
+    background-color: $gray-medium;
+    height: 7px !important;
+    border-radius: 6px;
+    position: static !important;
+  }
+
+  &__swiper .swiper-scrollbar-drag {
+    background-color: $yellow-gold;
+    height: 7px;
+    border-radius: 6px;
+  }
+
+  &__scrollbar-wrapper {
+    @include tablet {
+      width: 272px;
+    }
+
+    @include small {
+      width: 100%;
+    }
+  }
+
+  &__buttons-block {
+    display: flex;
+    gap: 16px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    @include tablet {
+      top: calc(143.5px + 40px + 24px);
+    }
+
+    @include small {
+      top: 24px;
+      right: 24px;
+    }
+  }
+
+  &__button {
+    height: 40px;
+    width: 40px;
+    box-sizing: border-box;
+    border: 2px solid $blue-deep;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    @include desktop {
+      height: 56px;
+      width: 56px;
+    }
+
+    @include hover(transform, scale(1.1));
+  }
+
+  &__button-icon {
+    height: 24px;
+    width: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &--left {
+      background-image: url(../images/icons/caret-left-blue.png);
+    }
+
+    &--right {
+      background-image: url(../images/icons/caret-right-blue.png);
+    }
+  }
+
+  &__test-block {
+    display: none;
+
+    @include tablet {
+      display: block;
+      padding: 24px 24px 40px 24px;
+      background-color: $gray-light;
+      border-radius: 8px;
+    }
+
+    @include small {
+      padding: 40px;
+    }
+  }
+
+  &__test-header {
+    display: none;
+
+    @include small {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    @include small {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__test-title {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0.015em;
+    margin-bottom: 8px;
+
+    @include desktop {
+      font-size: 28px;
+      letter-spacing: 0.014em;
+    }
+  }
+
+  &__test-text {
+    font-weight: 300;
+    color: $gray-medium;
   }
 }

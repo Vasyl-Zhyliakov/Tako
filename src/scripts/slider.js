@@ -71,11 +71,11 @@ export const awardsSwiper = new Swiper('.awards__swiper', {
   },
 });
 
-export const workSwiper = new Swiper('.awards__swiper', {
+export const workSwiper = new Swiper('.work__swiper', {
   modules: [Navigation, Scrollbar],
   navigation: {
-    nextEl: '.work__button--right',
-    prevEl: '.work__button--left',
+    nextEl: '.work__button-right',
+    prevEl: '.work__button-left',
   },
 
   scrollbar: {
@@ -89,6 +89,7 @@ export const workSwiper = new Swiper('.awards__swiper', {
   breakpoints: {
     0: {
       slidesPerView: 1,
+      spaceBetween: 52,
     },
   },
 });

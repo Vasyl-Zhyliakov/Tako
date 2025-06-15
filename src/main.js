@@ -1,4 +1,5 @@
 import { testimonialsSwiper, awardsSwiper, workSwiper } from './scripts/slider';
+import { animateMotion } from './scripts/motion';
 
 function updateMenuState() {
   if (window.location.hash === '#menu') {
@@ -47,4 +48,8 @@ document.querySelectorAll('.details__button').forEach((button) => {
       });
     }
   });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  animateMotion();
 });
