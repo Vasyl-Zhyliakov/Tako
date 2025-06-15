@@ -1,0 +1,41 @@
+.page {
+  font-family: 'e-Ukraine', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.016em;
+  color: $black;
+  min-width: 375px;
+  background-color: $gray-light;
+  scroll-behavior: smooth;
+
+  &__body {
+    margin: 0;
+
+    &--with-menu {
+      overflow: hidden;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+    opacity: 0;
+    pointer-events: none;
+    scroll-margin-top: 100vh;
+
+    @include desktop {
+      top: 80px;
+    }
+
+    &:target {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}

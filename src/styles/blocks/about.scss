@@ -1,0 +1,64 @@
+.about {
+  display: none !important;
+  &__content {
+    padding: 64px 0;
+
+    @include tablet {
+      display: flex;
+      gap: 32px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 23px;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: 0.014em;
+    margin-bottom: 32px;
+    border-bottom: 1px solid $gray-medium;
+
+    @include tablet {
+      font-size: 36px;
+      letter-spacing: 0.0135em;
+      border-bottom: none;
+      width: 274px;
+      flex-shrink: 0;
+    }
+
+    @include desktop {
+      width: 437px;
+      font-size: 56px;
+      letter-spacing: 0.0125em;
+    }
+  }
+
+  &__article-text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.016em;
+    color: $gray-dark;
+
+    &--bold {
+      color: $black;
+    }
+
+    @include tablet {
+      text-align: justify;
+    }
+
+    @include desktop {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+
+      @include tablet {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}

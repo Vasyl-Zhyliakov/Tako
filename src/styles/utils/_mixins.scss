@@ -1,0 +1,50 @@
+@mixin hover($_property, $_toValue) {
+  transition: #{$_property} 0.3s;
+  &:hover {
+    #{$_property}: $_toValue;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin grid {
+  --column: 2;
+
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(var(--column), 1fr);
+
+  @include tablet {
+    --column: 6;
+  }
+
+  @include small {
+    --column: 12;
+  }
+
+  @include desktop {
+    gap: 32px;
+  }
+}

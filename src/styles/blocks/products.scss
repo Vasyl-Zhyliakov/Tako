@@ -1,0 +1,143 @@
+.products {
+  display: none !important;
+  &__content {
+    padding-block: 64px;
+
+    @include desktop {
+      padding-block: 132px;
+    }
+  }
+
+  &__title-block {
+    margin-bottom: 32px;
+
+    @include small {
+      border-bottom: 1px solid $gray-medium;
+      padding-bottom: 31px;
+    }
+  }
+
+  &__cards {
+    @include grid;
+    row-gap: 52px;
+
+    @include tablet {
+      column-gap: 32px;
+      row-gap: 40px;
+    }
+
+    @include desktop {
+      row-gap: 64px;
+    }
+  }
+
+  &__card {
+    grid-column: span 2;
+
+    @include tablet {
+      grid-column: span 3;
+    }
+
+    @include small {
+      grid-column: span 4;
+    }
+
+    @include hover(transform, scale(1.02));
+  }
+
+  &__image {
+    height: 172px;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include desktop {
+      height: 232px;
+    }
+
+    &--weapon {
+      background-image: url(../images/products-1.png);
+    }
+
+    &--medicine {
+      background-image: url(../images/products-2.png);
+    }
+
+    &--radio {
+      background-image: url(../images/products-3.png);
+    }
+
+    &--reb {
+      background-image: url(../images/products-4.png);
+    }
+
+    &--drone {
+      background-image: url(../images/products-5.png);
+    }
+  }
+
+  &__text-block {
+    padding: 24px;
+
+    @include tablet {
+      padding-bottom: 33px;
+    }
+
+    @include desktop {
+      padding-bottom: 45px;
+    }
+
+    @include tablet {
+      &--grow {
+        min-height: 192px;
+        box-sizing: border-box;
+      }
+    }
+
+    @include desktop {
+      &--grow {
+        height: 216px;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0.015em;
+    margin-bottom: 16px;
+
+    @include tablet {
+      font-size: 28px;
+      letter-spacing: 0.014em;
+    }
+
+    @include desktop {
+      font-size: 36px;
+      letter-spacing: 0.0135em;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.016;
+    color: $gray-dark;
+
+    @include small {
+      height: 85px;
+      display: -webkit-box;
+      -webkit-line-clamp: 5; /* количество строк */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    @include desktop {
+      height: 88px;
+      font-size: 16px;
+      line-height: 140%;
+    }
+  }
+}

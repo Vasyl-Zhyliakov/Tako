@@ -1,0 +1,164 @@
+.awards {
+  display: none !important;
+  &__content {
+    padding-block: 64px;
+
+    @include tablet {
+      display: flex;
+      gap: 32px;
+      width: 100%;
+    }
+
+    @include desktop {
+      padding-block: 132px;
+    }
+  }
+
+  &__text-block {
+    padding-bottom: 23px;
+    border-bottom: 1px solid $gray-medium;
+    margin-bottom: 32px;
+
+    @include tablet {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+      width: 213px;
+    }
+
+    @include desktop {
+      width: 299px;
+    }
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: 0.0135em;
+    margin-bottom: 24px;
+
+    @include tablet {
+      padding-bottom: 31px;
+      margin-bottom: 32px;
+      border-bottom: 1px solid $gray-medium;
+    }
+
+    @include desktop {
+      font-size: 56px;
+      letter-spacing: 0.0125em;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    color: $gray-dark;
+
+    @include desktop {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__swiper {
+    overflow: hidden;
+    min-width: 0;
+
+    @include tablet {
+      width: calc(100% - 213px - 32px);
+    }
+
+    @include desktop {
+      width: calc(100% - 299px - 32px);
+    }
+  }
+
+  & .swiper-wrapper {
+    height: auto;
+  }
+
+  &__swiper .swiper-scrollbar {
+    background-color: $gray-medium;
+    height: 7px !important;
+    border-radius: 6px;
+    position: static !important;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__swiper .swiper-scrollbar-drag {
+    background-color: $blue-light;
+    height: 7px;
+    border-radius: 6px;
+  }
+
+  & .swiper-slide {
+    height: 220px;
+    width: 100%;
+
+    @include tablet {
+      height: 300px;
+    }
+
+    @include desktop {
+      height: 442px;
+    }
+
+    @include large {
+      height: 492px;
+    }
+
+    @include hover(transform, scale(0.97));
+  }
+
+  &__card {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+
+    &--1 {
+      background-image: url(../images/award-1.png);
+    }
+
+    &--2 {
+      background-image: url(../images/award-2.png);
+    }
+
+    &--3 {
+      background-image: url(../images/award-3.png);
+    }
+  }
+
+  &__buttons-block {
+    display: flex;
+    gap: 16px;
+    margin: 32px 0 24px 0;
+    max-width: 100%;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    @include tablet {
+      gap: 32px;
+    }
+  }
+
+  & .button-swiper--right {
+    flex-grow: 1;
+  }
+
+  & .button-swiper--left {
+    @include tablet {
+      width: 147px;
+    }
+
+    @include desktop {
+      width: calc((100% - 32px * 2) / 3);
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.partners {
+  display: none !important;
+  &__content {
+    padding: 64px 0;
+
+    @include desktop {
+      padding: 132px 0;
+    }
+
+    @include grid;
+  }
+
+  &__title-block {
+    margin-bottom: 32px;
+    grid-column: 1/3;
+
+    @include tablet {
+      grid-column: 1/7;
+    }
+
+    @include small {
+      grid-column: span 4;
+      margin-bottom: 0;
+    }
+  }
+
+  &__card {
+    height: 164px;
+    border: 1px solid $gray-medium;
+    border-radius: 8px;
+    box-sizing: border-box;
+    grid-column: span 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: end;
+    text-decoration: none;
+
+    @include tablet {
+      grid-column: span 3;
+    }
+
+    @include small {
+      grid-column: span 4;
+      height: 300px;
+    }
+
+    @include desktop {
+      height: 420px;
+    }
+
+    &--wide {
+      height: 192px;
+      grid-column: span 2;
+
+      @include tablet {
+        grid-column: span 6;
+      }
+
+      @include small {
+        grid-column: span 4;
+        height: 300px;
+      }
+
+      @include desktop {
+        height: 420px;
+      }
+    }
+
+    &--uaitlab {
+      background-image: url(../images/logo-uaitlab.png);
+    }
+
+    &--helpstab {
+      background-image: url(../images/logo-helpstab.png);
+    }
+
+    &--alla {
+      background-image: url(../images/photo-alla.png);
+
+      @include small {
+        background-image: url(../images/photo-alla1.png);
+        background-position: 50% 35%;
+        background-size: cover;
+      }
+    }
+
+    @include hover(transform, scale(1.05));
+  }
+
+  &__card-signature-block {
+    margin: 0 12px 4px 12px;
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @include small {
+      margin: 0 24px 16px 24px;
+    }
+  }
+
+  &__card-signature {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: $blue-deep;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0.016em;
+    max-width: 111px;
+
+    @include tablet {
+      flex-grow: 1;
+      max-width: none;
+    }
+
+    @include small {
+      height: 56px;
+    }
+  }
+
+  &__card-icon {
+    height: 20px;
+    width: 20px;
+    background-image: url(../images/icons/arrow-blue.png);
+  }
+}

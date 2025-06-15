@@ -1,0 +1,90 @@
+.button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3;
+  text-decoration: none;
+  border-radius: 999px;
+
+  &--blue {
+    color: $white;
+    background-color: $blue-deep;
+    border: 2px solid $blue-deep;
+
+    &:hover {
+      color: $blue-deep;
+      background-color: $white;
+
+      .button__icon--white {
+        background-image: url(../images/icons/arrow-blue.png);
+      }
+    }
+  }
+
+  &--white {
+    color: $blue-deep;
+    background-color: $white;
+    border: 2px solid $blue-deep;
+
+    &:hover {
+      color: $white;
+      background-color: $blue-deep;
+
+      .button__icon--blue {
+        background-image: url(../images/icons/arrow-white.png);
+      }
+    }
+  }
+
+  &__icon {
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include desktop {
+      height: 28px;
+      width: 28px;
+    }
+
+    &--white {
+      background-image: url(../images/icons/arrow-white.png);
+    }
+
+    &--blue {
+      background-image: url(../images/icons/arrow-blue.png);
+    }
+  }
+
+  &--header {
+    @include tablet {
+      max-width: 459px;
+      box-sizing: border-box;
+    }
+
+    @include desktop {
+      max-width: 554px;
+    }
+  }
+
+  &--header,
+  &--numbers,
+  &--products {
+    padding: 14px 20px 14px 28px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0;
+
+    @include desktop {
+      padding: 20px 22px 20px 30px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 120%;
+    }
+  }
+
+  &--menu {
+    justify-content: center;
+    padding: 14px;
+  }
+}

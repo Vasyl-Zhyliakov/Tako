@@ -1,0 +1,51 @@
+.card {
+  width: calc((100% - $menu-card-gar * 3) / 4);
+  border-bottom: 2px solid $gray-medium;
+
+  @include hover(transform, scale(1.05));
+
+  &__image {
+    height: 172px;
+    border-radius: 8px;
+    display: block;
+
+    &--weapon {
+      background-image: url(../images/card-1.png);
+    }
+
+    &--medicine {
+      background-image: url(../images/card-2.png);
+    }
+
+    &--radio {
+      background-image: url(../images/card-3.png);
+    }
+
+    &--reb {
+      background-image: url(../images/card-4.png);
+    }
+
+    &--drone {
+      background-image: url(../images/card-5.png);
+    }
+  }
+
+  &__link {
+    padding: 24px 24px 22px 24px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.016em;
+    text-decoration: none;
+    color: $black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icon {
+    height: 28px;
+    width: 28px;
+    background-image: url(../images/icons/arrow-black.png);
+  }
+}

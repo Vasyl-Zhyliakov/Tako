@@ -1,0 +1,232 @@
+.nav {
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1542px;
+
+  @include desktop {
+    padding: 16px 32px;
+  }
+
+  @include large {
+    padding: 16px 0;
+  }
+
+  &__left {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    @include desktop {
+      gap: 32px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  &__logo {
+    height: 40px;
+
+    @include hover(transform, scale(1.05));
+
+    &--small-desktop {
+      @include desktop {
+        background-color: gray;
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @include desktop {
+        display: block;
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include hover(transform, scale(1.05));
+
+    &--menu {
+      height: 40px;
+      width: 52px;
+      background-image: url(../images/icons/menu.png);
+
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__button-mobile {
+    display: block;
+    text-decoration: none;
+    color: $black;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0;
+    padding: 10px 22px;
+    box-sizing: border-box;
+    border: 2px solid $black;
+    border-radius: 999px;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $white;
+      background-color: $black;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__button-desktop {
+    display: none;
+    text-decoration: none;
+    padding: 13px 26px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0;
+    color: $blue-deep;
+    border: 2px solid $blue-deep;
+    border-radius: 999px;
+    transition: all 0.3;
+
+    &:hover {
+      color: $white;
+      background-color: $blue-deep;
+    }
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &__backpack-container {
+    display: block;
+    height: 40px;
+    width: 44px;
+    position: relative;
+    background-color: black;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include hover(transform, scale(1.05));
+
+    @include desktop {
+      gap: 8px;
+      height: auto;
+      width: auto;
+      position: static;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+  }
+
+  &__backpack-icon {
+    height: 20px;
+    width: 20px;
+    background-image: url(../images/icons/backpack.png);
+    background-size: contain;
+  }
+
+  &__backpack-text {
+    display: none;
+    font-family: e-Ukraine;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: $white;
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &__backpack-number {
+    position: absolute;
+    top: -4px;
+    left: 28px;
+    font-weight: 400;
+    height: 20px;
+    width: 20px;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0.014em;
+    color: $white;
+    background-color: $blue-light;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--small {
+      font-size: 8px;
+    }
+
+    @include desktop {
+      position: static;
+    }
+  }
+
+  &__block {
+    display: none;
+
+    @include desktop {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+  }
+
+  &__menu-button {
+    padding: 14px 20px 14px 28px;
+    text-decoration: none;
+    background-color: $blue-deep;
+    color: $white;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0;
+    border-radius: 999px;
+    display: flex;
+    gap: 8px;
+    @include hover(transform, scale(1.05));
+
+    &--active .nav__menu-button-icon {
+      background-image: url(../images/icons/close.png);
+    }
+  }
+
+  &__menu-button-icon {
+    height: 20px;
+    width: 20px;
+    background-image: url(../images/icons/caret-down.png);
+  }
+
+  &__list {
+    display: flex;
+    gap: 24px;
+  }
+  &__list-item {
+    @include hover(transform, scale(1.05));
+  }
+
+  &__list-link {
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 0.016em;
+    color: $black;
+  }
+}

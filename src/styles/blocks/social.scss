@@ -1,0 +1,131 @@
+.social {
+  height: 48px;
+  width: 48px;
+  box-sizing: border-box;
+  border: 2px solid $blue-deep;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+
+  &--testimonials {
+    height: 56px;
+    width: 56px;
+
+    @include tablet {
+      height: 48px;
+      width: 48px;
+    }
+
+    @include desktop {
+      height: 72px;
+      width: 72px;
+    }
+  }
+
+  &__icon {
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--testimonials {
+      height: 24px;
+      width: 24px;
+
+      @include tablet {
+        height: 20px;
+        width: 20px;
+      }
+
+      @include desktop {
+        height: 28px;
+        width: 28px;
+      }
+    }
+
+    &--instagram-blue {
+      background-image: url(../images/icons/InstagramLogo-blue.png);
+    }
+
+    &--facebook-blue {
+      background-image: url(../images/icons/FacebookLogo-blue.png);
+    }
+
+    &--tiktok-blue {
+      background-image: url(../images/icons/TiktokLogo-blue.png);
+    }
+
+    &--youtube-blue {
+      background-image: url(../images/icons/YoutubeLogo-blue.png);
+    }
+
+    &--instagram-white {
+      background-image: url(../images/icons/InstagramLogo-white.png);
+    }
+
+    &--facebook-white {
+      background-image: url(../images/icons/FacebookLogo-white.png);
+    }
+
+    &--tiktok-white {
+      background-image: url(../images/icons/TiktokLogo-white.png);
+    }
+
+    &--youtube-white {
+      background-image: url(../images/icons/YoutubeLogo-white.png);
+    }
+  }
+
+  &--white {
+    &:hover {
+      background-color: $blue-deep;
+
+      .social__icon {
+        &--instagram-blue {
+          background-image: url(../images/icons/InstagramLogo-white.png);
+        }
+
+        &--facebook-blue {
+          background-image: url(../images/icons/FacebookLogo-white.png);
+        }
+
+        &--tiktok-blue {
+          background-image: url(../images/icons/TiktokLogo-white.png);
+        }
+
+        &--youtube-blue {
+          background-image: url(../images/icons/YoutubeLogo-white.png);
+        }
+      }
+    }
+  }
+
+  &--blue {
+    background-color: $blue-deep;
+
+    &:hover {
+      background-color: $white;
+
+      .social__icon {
+        &--instagram-white {
+          background-image: url(../images/icons/InstagramLogo-blue.png);
+        }
+
+        &--facebook-white {
+          background-image: url(../images/icons/FacebookLogo-blue.png);
+        }
+
+        &--tiktok-white {
+          background-image: url(../images/icons/TiktokLogo-blue.png);
+        }
+
+        &--youtube-white {
+          background-image: url(../images/icons/YoutubeLogo-blue.png);
+        }
+      }
+    }
+  }
+}

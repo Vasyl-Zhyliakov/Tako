@@ -1,0 +1,33 @@
+.work {
+  &__content {
+    padding-block: 64px;
+
+    @include desktop {
+      padding-block: 132px;
+    }
+  }
+
+  &__test-block {
+    display: none;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: 0.0135em;
+    padding-bottom: 23px;
+    border-bottom: 1px solid $gray-medium;
+    margin-bottom: 32px;
+
+    @include tablet {
+      padding-bottom: 31px;
+    }
+
+    @include desktop {
+      font-weight: 300;
+      font-size: 56px;
+      letter-spacing: 0.0125em;
+    }
+  }
+}
