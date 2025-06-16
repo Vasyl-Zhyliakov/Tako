@@ -16,6 +16,8 @@
     letter-spacing: 0.0135em;
 
     @include desktop {
+      font-family: 'e-Ukraine-Head', sans-serif;
+
       font-size: 56px;
       letter-spacing: 0.0125em;
     }

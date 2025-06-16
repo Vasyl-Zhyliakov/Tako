@@ -11,10 +11,10 @@
 
   &__body {
     margin: 0;
+  }
 
-    &--with-menu {
-      overflow: hidden;
-    }
+  &__body:has(.page__menu:target) {
+    overflow: hidden;
   }
 
   &__menu {
@@ -22,11 +22,13 @@
     top: 56px;
     left: 0;
     right: 0;
+    bottom: 0;
     transform: translateX(-100%);
     transition: all 0.3s;
     opacity: 0;
     pointer-events: none;
     scroll-margin-top: 100vh;
+    overflow: auto;
 
     @include desktop {
       top: 80px;

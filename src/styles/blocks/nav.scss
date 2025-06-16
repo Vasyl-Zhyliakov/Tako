@@ -114,7 +114,6 @@
   }
 
   &__backpack-container {
-    display: block;
     height: 40px;
     width: 44px;
     position: relative;
@@ -145,7 +144,6 @@
 
   &__backpack-text {
     display: none;
-    font-family: e-Ukraine;
     font-weight: 700;
     letter-spacing: 0;
     color: $white;
