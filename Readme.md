@@ -10,6 +10,20 @@
 - BEM methodology
 - JavaScript
 - Vite
+- Swiper.js
+- GSAP MotionPathPlugin
+
+# Features
+
+Responsive Design – Built with a mobile-first approach, ensuring seamless performance across various devices.
+
+Adaptive Layout – The design dynamically adjusts to different screen sizes:
+
+- The design < 1920px
+- Desktop > 1440px
+- Small desktop > 1024px
+- Tablet > 768px
+- Mobile > 375px
 
 # Follow these steps to run the project locally:
 
