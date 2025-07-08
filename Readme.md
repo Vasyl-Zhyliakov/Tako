@@ -1,8 +1,7 @@
 # The project was created with Vite + TypeScript.
 
-[Demo](https://vasyl-zhyliakov.github.io/Tako/)
-
-[Mockup](https://www.figma.com/design/jbEAiyfs9S7vxowreRyNJh/Tako?node-id=0-1&m=dev&t=NYSnzualxT6poTXX-1)
+- [Demo](https://vasyl-zhyliakov.github.io/Tako/)
+- [Mockup](https://www.figma.com/design/jbEAiyfs9S7vxowreRyNJh/Tako?node-id=0-1&m=dev&t=NYSnzualxT6poTXX-1)
 
 # Technologies used
 
